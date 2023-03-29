@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Tour</title>
+    <style>
+.center {
+    width: fit-content;
+    margin: auto;
+}
+
+.departure {
+    width: 250px;
+    height: 40px;
+    background-image: url(icons/departure.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 125px;
+    border: 2px solid #66c2ff;
+    border-radius: 5px;
+    font-size: large;
+    color: #6c6c6c;
+    padding: 0px 10px;
+    margin: 10px;
+    display: block;
+    /* transition effect */
+    transition-duration: 3s;
+    transition-delay: 0s;
+}
+.departure:hover {
+    background-position: 200px;
+}
+
+.arrival {
+    width: 250px;
+    height: 40px;
+    background-image: url(icons/arrival.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;    
+    border: 2px solid #66c2ff;
+    border-radius: 5px;
+    font-size: large;
+    color: #6c6c6c;
+    padding: 0px 10px;
+    
+    margin: 10px;
+    /* animation effect */
+    animation-name: example;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+@keyframes example {  
+  from {background-position: 200px}
+  to {background-position: 125px}
+}
+    </style>
+</head>
+
+<body>  
+    <div class="center">
+        <input class="departure" id="departure" name="departure" type="date" required />
+        
+        <input class="arrival" id="arrival" name="arrival" type="date" required />
+    </div>       
+</body>
+</html>
